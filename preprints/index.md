@@ -113,7 +113,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only started to register DOI's for preprints at this time, including all preprints published since launching their first preprint servers in fall 2016. 
+The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only started to register DOI's for preprints at this time, including a backfill for all preprints published since launching their first preprint servers in fall 2016. 
 
 This is corroborated by comparing the plots for overall number of DOIs from OSF an number of DOIs for text from OSF. 
 Prior to May 2017, OSF was already issuing DOIs for other entities, most likely projects, but registration of text documents was virtually non-existent until that time.  
