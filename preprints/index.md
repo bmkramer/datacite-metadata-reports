@@ -113,7 +113,7 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
-The total number of DataCite DOIs for preprints from OSF (11409 on May 18, 2018) closely matches the total number of preprints on all OSF preprint servers as listed on [OSF Preprint Search](https://osf.io/preprints/discover) (11523 on May 17, 2018).  
+The total number of DataCite DOIs for preprints from OSF (11419 on May 18, 2018) closely matches the total number of preprints on all OSF preprint servers as listed on [OSF Preprint Search](https://osf.io/preprints/discover) (11523 on May 17, 2018).  
 
 The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only started to register DOI's for preprints at this time, including a backfill for all preprints published since launching their first preprint servers in fall 2016. 
 
