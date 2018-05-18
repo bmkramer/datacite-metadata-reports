@@ -113,10 +113,12 @@ ggplot(dois, aes(x=date, y=value)) +
 
 ![](figure/datacite_preprints_OSF_plot.png)<!-- -->
 
+The total number of DataCite DOIs for preprints from OSF (11409 on May 18, 2018) closely matches the total number of preprints on all OSF preprint servers as listed on [OSF Preprint Search](https://osf.io/preprints/discover) (11523 on May 17, 2018).  
+
 The large peak in May 2017 observed in the figure for preprint DOIs overall is almost completely attributable to OSF. This peak likely indicates that OSF only started to register DOI's for preprints at this time, including a backfill for all preprints published since launching their first preprint servers in fall 2016. 
 
 This is corroborated by comparing the plots for overall number of DOIs from OSF an number of DOIs for text from OSF. 
-Prior to May 2017, OSF was already issuing DOIs for other entities, most likely projects, but registration of text documents was virtually non-existent until that time.  
+Prior to May 2017, OSF was already issuing DOIs for other entities, but registration of text documents was virtually non-existent until that time. Interestingly, there is a peak in OSF for text material in May 2018 (see figure below) that is not labeled as preprint in the metadata. Also for the months between June 2017-April 2018 (so starting right after the registration of DOIs for preprints by OSF) there is a considerable number of text documents that is not labeled as preprints. Further inpection learned these are have 'Project' as resource type. Whether or not these are related to OSF projects that can automatically be generated when a preprint is uploaded requires checking. 
 
 ```r
 # alternative query lines to use in script:
@@ -124,20 +126,15 @@ Prior to May 2017, OSF was already issuing DOIs for other entities, most likely 
 dois <- dc_facet(q = 'datacentre_symbol:CDL.COS', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
 # all OSF DOIs for text
 dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
-```
-
-![](figure/datacite_OSF_plot.png)<!-- -->
-![](figure/datacite_text_OSF_plot.png)<!-- -->
-
-Interestingly, there is a peak in OSF for text material in May 2018 (see figure below) that is not labeled as preprint in the metadata. For the months between June 2017-April 2018 there is also a considerable number of text documents not labeled as preprints. These are likely indeed not preprints, since the total number of preprints on all OSF preprint servers as listed on [OSF Preprint Search](https://osf.io/preprints/discover) (11523 on May 17, 2018) closely matches the number of DataCite DOIs for preprints from OSF (11409 on May 18, 2018).  
-
-```r
-# alternative query line to use in script:
 # all OSF DOIs for text excluding preprints
 dois <- dc_facet(q = 'datacentre_symbol:CDL.COS AND resourceTypeGeneral:Text NOT resourceType:Preprint', facet.date = 'created', facet.date.start = "2013-01-01T00:00:00Z", facet.date.end = last_month, facet.date.gap = "+1MONTH")
 ```
 
+![](figure/datacite_OSF_plot.png)<!-- -->
+![](figure/datacite_text_OSF_plot.png)<!-- -->
 ![](figure/datacite_OSF_text-not-preprint_plot.png)<!-- --> 
+
+
 
 ## ResearchGate
 
